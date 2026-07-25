@@ -1,0 +1,2 @@
+"import React, { useEffect, useState, useRef } from 'react';\nimport { useWorkspaceStore } from '../store/store';\nimport { \n  Send, BookOpen, Code, Layers, Settings, MessageSquare, AlertCircle, \n  Sparkles, FileText, Download, Plus, Trash2, X, \n  Paper
+<truncated 34928 bytes>

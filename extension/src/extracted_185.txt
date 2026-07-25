@@ -1,0 +1,1 @@
+"            <Sparkles className=\"text-blue-600\" size={18} />\n            <span className=\"font-black text-xs uppercase tracking-wider truncate max-w-[180px]\">{chatHeading}</span>"

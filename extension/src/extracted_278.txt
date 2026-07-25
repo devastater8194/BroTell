@@ -1,0 +1,2 @@
+"      {/* 1. Sidebar - Collapsible History (Figma Option A Dark Theme) */}\n      <div \n        className={`flex flex-col h-full border-r-2 border-black z-30 transition-all duration-300 absolute md:relative ${\n          showHistory ? 'left-0 w-64' : '-l
+<truncated 154 bytes>

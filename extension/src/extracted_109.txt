@@ -1,0 +1,1 @@
+"    conversations,\n    conversationId,\n    selectConversation,\n    startNewChat,\n    deleteConversation"
