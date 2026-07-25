@@ -1,7 +1,13 @@
-node_modules/
 .env
+.env.*
+node_modules/
 dist/
 build/
-*.zip
+backend/.venv/
+backend/__pycache__/
+backend/**/*.pyc
 .DS_Store
 Thumbs.db
+.vscode/
+*.log
+*.zip
