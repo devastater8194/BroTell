@@ -1,0 +1,33 @@
+<USER_REQUEST>
+# Scaling the YouTube AI Extension for Concurrent, High-Traffic Use
+
+This document extends your product spec with the infrastructure layer needed so the
+extension stays fast and stable when thousands of users hit it at the same time.
+Organized by layer: network → backend → data → LLM/RAG → async jobs → observability → security.
+
+---
+
+## 1. High-Level Architecture
+
+```
+Chrome Extension (React/TS)
+        │
+        ▼
+   Cloudflare (CDN + DDoS + WAF + rate limiting at edge)
+        │
+        ▼
+   API Gateway / Load Balancer (AWS ALB / Nginx / Kong)
+        │
+   ┌────┴─────┐
+   ▼          ▼
+FastAPI    FastAPI      (stateless, horizontally scaled pods)
+ pod 1      pod N
+   │          │
+   └────┬─────┘
+        ▼
+ Redis (cache, pub/sub, rate limits, session store)
+        │
+   ┌────┼─────────────┐
+   ▼    ▼              ▼
+Postgres   Vector DB   Message Queue (Celery/Kafka)
+<truncated 11732 bytes>
